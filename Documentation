@@ -1,0 +1,63 @@
+:>To configure Cypress tests to run on at least two different browsers (e.g., Chrome and Firefox):
+
+>Install Cypress browser launchers for Chrome and Firefox using npm or yarn.
+>Modify your Cypress configuration file (usually "cypress.json") to include the browser configurations for both Chrome and Firefox.
+>Run your Cypress tests using the "cypress run" command, and Cypress will execute the tests in both Chrome and Firefox based on the specified configurations.
+
+
+:>Document your testing approach, including the test cases, and any challenges faced during testing.
+Testing Approach:
+1> Valid Credentials - Successful Login:
+
+>Enter valid username and password.
+>Click the "Login" button.
+
+2>Invalid Credentials - Invalid Username:
+
+>Enter a valid password.
+>Enter an invalid username.
+>Click the "Login" button.
+
+3>Invalid Credentials - Invalid Password:
+
+>Enter a valid username.
+>Enter an invalid password.
+>Click the "Login" button.
+
+4>Invalid Credentials - Both Username and Password Invalid:
+
+>Enter an invalid username.
+>Enter an invalid password.
+>Click the "Login" button.
+
+5>Empty Fields - No Input Provided:
+
+>Leave both username and password fields empty.
+>Click the "Login" button.
+>Verify that an appropriate error message is displayed, indicating that both fields are required.
+
+6>Empty Fields - Only Username Provided:
+
+>Enter a valid username.
+>Leave the password field empty.
+>Click the "Login" button.
+>Verify that an appropriate error message is displayed, indicating that the password field is required.
+
+7>Empty Fields - Only Password Provided:
+
+>Enter a valid password.
+>Leave the username field empty.
+>Click the "Login" button.
+>Verify that an appropriate error message is displayed, indicating that the username field is required.
+
+8> Validate Dashboard
+>Enter a valid password.
+>Leave the username field empty.
+>Click the "Login" button.
+>Verify Dashboard
+
+
+**>Challenges faced during testing
+:>Testing Stateful Behavior: Testing scenarios like session management, remembering the user after login, and handling concurrent logins can be complex and require careful scripting.
+:>UI Changes: Frequent UI changes can lead to test script maintenance challenges, as you may need to update your test scripts to match the updated UI elements.
+:>Cross-Browser Compatibility: Ensuring consistent behavior and appearance across different browsers can be challenging, as each browser may interpret HTML, CSS, and JavaScript differently.
